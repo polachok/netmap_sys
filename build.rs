@@ -18,6 +18,7 @@ fn main() {
             .define("NETMAP_WITH_LIBS", None)
             .define("static", Some(""))
             .define("inline", Some(""))
+            .include("netmap/sys")
             .compile("librust_netmap_user.a");
         fs::remove_file(&tmp_path).unwrap();
     }
