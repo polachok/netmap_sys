@@ -1,0 +1,6 @@
+language: rust
+script:
+  - |
+      git clone --depth=1 https://github.com/luigirizzo/netmap &&
+      cargo build --verbose && cargo test --verbose &&
+      cargo build --features netmap_with_libs && cargo test --features netmap_with_libs
